@@ -7,12 +7,22 @@ import SmallCard from "../../components/SmallCard";
 import api from "../../services/api";
 import { PokemonDTO } from "../../dtos/PokemonDTO";
 import { FlatList, TouchableWithoutFeedback, TouchableWithoutFeedbackBase } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 function Home() {
     const [decrescente, setDecrescente] = useState(false);
     const [nomeFiltro, setNomeFiltro] = useState('');
     const [pokemons, setPokemons] = useState<PokemonDTO[]>([]);
     const [pokemonsFiltro, setPokemonsFiltro] = useState<PokemonDTO[]>([]);
+    const navigation = useNavigation();
+
+    function navegarParaDetalhes(pokemon: PokemonDTO) {
+        console.log('a');
+
+        navigation.navigate('Detalhes' as never, { pokemon } as never);
+    };
+
+
     function alteraValorOrdenacao() {
         setDecrescente(estadoAntigo => !estadoAntigo)
     }
@@ -46,28 +56,28 @@ function Home() {
     }, [decrescente]);
     return (
         <TouchableWithoutFeedback onPress={() => KeyBoard.dismiss()}>
- <Container>
-            <Header>
-                <ConteudoTitulo>
-                    <Pokebola width={27} height={27} />
-                    <Titulo>Pokemon</Titulo>
-                </ConteudoTitulo>
-                <BotaoOrdenacao onPress={() => alteraValorOrdenacao()} >
-                    {
-                        decrescente ? <SortAsc /> : <SortDesc />
-                    }
-                </BotaoOrdenacao>
-            </Header>
-            <InputTexto placeholder="Procurar" onChangeText={(texto) => alteraNomeFiltro(texto)}  keyboardAppearance="dark" />
-            <FlatList data={pokemonsFiltro} keyExtractor={(item)=>item.id.toString()  } 
-            numColumns={3} 
-            contentContainerStyle={{ alignItems : 'center' , justifyContent:'center'}} 
-            style={{width:'100%'}} 
-            renderItem={({item})=><SmallCard pokemon={item}/>} />
+            <Container>
+                <Header>
+                    <ConteudoTitulo>
+                        <Pokebola width={27} height={27} />
+                        <Titulo>Pokemon</Titulo>
+                    </ConteudoTitulo>
+                    <BotaoOrdenacao onPress={() => alteraValorOrdenacao()} >
+                        {
+                            decrescente ? <SortAsc /> : <SortDesc />
+                        }
+                    </BotaoOrdenacao>
+                </Header>
+                <InputTexto placeholder="Procurar" onChangeText={(texto) => alteraNomeFiltro(texto)} keyboardAppearance="dark" />
+                <FlatList data={pokemonsFiltro} keyExtractor={(item) => item.id.toString()}
+                    numColumns={3}
+                    contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}
+                    style={{ width: '100%' }}
+                    renderItem={({ item }) => <SmallCard pokemon={item} onPress={() => navegarParaDetalhes(item)} />} />
 
-        </Container>
+            </Container>
         </TouchableWithoutFeedback>
-       
+
     )
 }
 
