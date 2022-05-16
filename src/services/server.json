@@ -7475,7 +7475,7 @@
     {
       "id" :250 ,
       "code":250 , 
-      "name": "Ho-Oh",
+      "name": "HoOh",
       "about" :{
        "weight": "199.0kg" , 
        "height": "3.8m" ,
@@ -14195,7 +14195,7 @@
     {
       "id" :474 ,
       "code":474 , 
-      "name": "Porygon-Z",
+      "name": "PorygonZ",
       "about" :{
        "weight": "34.0kg" , 
        "height": "0.9m" ,
@@ -23435,7 +23435,7 @@
     {
       "id" :782 ,
       "code":782 , 
-      "name": "Jangmo-o",
+      "name": "Jangmoo",
       "about" :{
        "weight": "29.7kg" , 
        "height": "0.6m" ,
@@ -23465,7 +23465,7 @@
     {
       "id" :783 ,
       "code":783 , 
-      "name": "Hakamo-o",
+      "name": "Hakamoo",
       "about" :{
        "weight": "47.0kg" , 
        "height": "1.2m" ,
@@ -23495,7 +23495,7 @@
     {
       "id" :784 ,
       "code":784 , 
-      "name": "Kommo-o",
+      "name": "Kommoo",
       "about" :{
        "weight": "78.2kg" , 
        "height": "1.6m" ,
