@@ -10,12 +10,13 @@ flex :1 ;
 padding : 4px 4px ; 
 background-color: ${({theme, type}) => theme[type]};
 `;
+
 export const Header = styled.View`
 width:100%; 
 align-items:  center ;
 justify-content :space-between ; 
 flex-direction : row ; 
-
+padding-bottom: 140px;
 `;
 
 export const ConteudoTitulo = styled.View`
@@ -58,6 +59,6 @@ align-items: center ;
 `;
 
 export const ConteudoSvg = styled.View`
-margin-top : -13px ;
+margin-top : -90px ;
 position: absolute;
 `;

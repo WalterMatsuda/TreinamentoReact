@@ -1,6 +1,7 @@
 import styled from  'styled-components/native';
+import { PokemonName } from '../../dtos/PokemonDTO';
 interface Props{
-    type : string ;
+    type : PokemonName;
      
 }
 
@@ -11,6 +12,9 @@ border-radius : 8px ;
 border-width:1px;
 margin: 10px;
 border-color : ${({theme , type }) => theme[type] };
+background-color : ${({theme }) => theme.white };
+
+
 `;
 
 export const ConteudoCodigo = styled.View`

@@ -6,7 +6,7 @@ import { BotaoOrdenacao, Container, ConteudoTitulo, Header, InputTexto, Titulo }
 import SmallCard from "../../components/SmallCard";
 import api from "../../services/api";
 import { PokemonDTO } from "../../dtos/PokemonDTO";
-import { FlatList, TouchableWithoutFeedback, TouchableWithoutFeedbackBase } from "react-native";
+import { FlatList, Keyboard, TouchableWithoutFeedback, TouchableWithoutFeedbackBase } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 function Home() {
@@ -36,7 +36,7 @@ function Home() {
 
     async function getPokemons() {
         try {
-            const filtro = decrescente ? '?_sort=name&_order=desc' : '?_sort=name&_order=asc';
+            const filtro = decrescente ? '?_sort=name&_order=desc&_limit=20' : '?_sort=name&_order=asc&_limit=20';
             console.log("filtro", filtro);
             const resposta = await api.get<PokemonDTO[]>('/pokemons' + filtro);
             if (resposta.data && resposta.data.length > 0) {
@@ -55,7 +55,7 @@ function Home() {
         getPokemons();
     }, [decrescente]);
     return (
-        <TouchableWithoutFeedback onPress={() => KeyBoard.dismiss()}>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
             <Container>
                 <Header>
                     <ConteudoTitulo>

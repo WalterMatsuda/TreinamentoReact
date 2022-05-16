@@ -1,4 +1,5 @@
 
+
 export interface PokemonAbout{
     weight : string ; 
     height  : string ; 
@@ -12,8 +13,7 @@ export interface PokemonMoves{
 }
 export interface PokemonType{
     id : number ;
-    name : string ;
-
+    name : PokemonName;
 }
 export interface PokemonStats{
     hp : string ; 
