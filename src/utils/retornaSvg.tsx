@@ -23,12 +23,6 @@ import Ekans from "../assets/pokemons/ekans.svg";
 import Arbok from "../assets/pokemons/arbok.svg";
 import Pikachu from "../assets/pokemons/Pikachu.svg";
 import Raichu from "../assets/pokemons/raichu.svg";
-import Sandshrew from "../assets/pokemons/sandshrew.svg";
-import Sandslash from "../assets/pokemons/sandslash.svg";
-import Nidorana from "../assets/pokemons/nidorana.svg";
-import Nidorina from "../assets/pokemons/nidorina.svg";
-import Nidoqueen from "../assets/pokemons/nidoqueen.svg";
-import Swirlix from "../assets/pokemons/swirlix.svg";
 import Nidorino from "../assets/pokemons/nidorino.svg";
 import Nidoking from "../assets/pokemons/nidoking.svg";
 import Clefairy from "../assets/pokemons/clefairy.svg";
@@ -467,12 +461,6 @@ import Togekiss from "../assets/pokemons/togekiss.svg";
 import Yanmega from "../assets/pokemons/yanmega.svg";
 import Leafeon from "../assets/pokemons/leafeon.svg";
 import Glaceon from "../assets/pokemons/glaceon.svg";
-import Gliscor from "../assets/pokemons/gliscor.svg";
-import Mamoswine from "../assets/pokemons/mamoswine.svg";
-import PorygonZ from "../assets/pokemons/porygonz.svg";
-import Gallade from "../assets/pokemons/gallade.svg";
-import Probopass from "../assets/pokemons/probopass.svg";
-import Dusknoir from "../assets/pokemons/dusknoir.svg";
 import Froslass from "../assets/pokemons/froslass.svg";
 import Uxie from "../assets/pokemons/uxie.svg";
 import Mesprit from "../assets/pokemons/mesprit.svg";
@@ -484,12 +472,6 @@ import Regigigas from "../assets/pokemons/regigigas.svg";
 import Giratina from "../assets/pokemons/giratina.svg";
 import Cresselia from "../assets/pokemons/cresselia.svg";
 import Phione from "../assets/pokemons/phione.svg";
-import Manaphy from "../assets/pokemons/manaphy.svg";
-import Darkrai from "../assets/pokemons/darkrai.svg";
-import Shaymin from "../assets/pokemons/shaymin.svg";
-import Arceus from "../assets/pokemons/arceus.svg";
-import Victini from "../assets/pokemons/victini.svg";
-import Snivy from "../assets/pokemons/snivy.svg";
 import Servine from "../assets/pokemons/servine.svg";
 import Serperior from "../assets/pokemons/serperior.svg";
 import Tepig from "../assets/pokemons/tepig.svg";
@@ -738,6 +720,7 @@ import Crabrawler from "../assets/pokemons/crabrawler.svg";
 import Crabominable from "../assets/pokemons/crabominable.svg";
 import Oricorio from "../assets/pokemons/oricorio.svg";
 import Cutiefly from "../assets/pokemons/cutiefly.svg";
+
 import Ribombee from "../assets/pokemons/ribombee.svg";
 import Rockruff from "../assets/pokemons/rockruff.svg";
 import Lycanroc from "../assets/pokemons/lycanroc.svg";
@@ -775,6 +758,7 @@ import Togedemaru from "../assets/pokemons/togedemaru.svg";
 import Mimikyu from "../assets/pokemons/mimikyu.svg";
 import Bruxish from "../assets/pokemons/bruxish.svg";
 import Drampa from "../assets/pokemons/drampa.svg";
+
 import Dhelmise from "../assets/pokemons/dhelmise.svg";
 import Jangmoo from "../assets/pokemons/jangmoo.svg";
 import Hakamoo from "../assets/pokemons/hakamoo.svg";
@@ -792,30 +776,11 @@ import Kartana from "../assets/pokemons/kartana.svg";
 import Guzzlord from "../assets/pokemons/guzzlord.svg";
 import Necrozma from "../assets/pokemons/necrozma.svg";
 import Magearna from "../assets/pokemons/magearna.svg";
-import MrMime from "../assets/pokemons/mrmime.svg";
-import MimeJr from "../assets/pokemons/mimejr.svg";
-import Giratina from "../assets/pokemons/giratina.svg";
-import Shaymin from "../assets/pokemons/shaymin.svg";
-import Lycanroc from "../assets/pokemons/Lycanroc.svg";
-import Oricorio from "../assets/pokemons/oricorio.svg";
-import Tapukoko from "../assets/pokemons/tapukoko.svg";
-import Tapulele from "../assets/pokemons/tapulele.svg";
-import Tapubulu from "../assets/pokemons/tapubulu.svg";
-import Tapufini from "../assets/pokemons/tapufini.svg";
+
 
 
 export default function retornaSvg(nome: string, largura = 72, altura = 72) {
     switch (nome) {
-        case 'MrMime': return <MrMime width={ largura } height = { altura } />
-case 'MimeJr': return <MimeJr width={ largura } height = { altura } />
-case 'Giratina': return <Giratina width={ largura } height = { altura } />
-case 'Shaymin': return <Shaymin width={ largura } height = { altura } />
-case 'Lycanroc': return <Lycanroc width={ largura } height = { altura } />
-case 'Oricorio': return <Oricorio width={ largura } height = { altura } />
-case 'Tapukoko': return <Tapukoko width={ largura } height = { altura } />
-case 'Tapulele': return <Tapulele width={ largura } height = { altura } />
-case 'Tapubulu': return <Tapubulu width={ largura } height = { altura } />
-case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Charmeleon': return <Charmeleon width={ largura } height = { altura } /> 
         case 'Charizard': return <Charizard width={ largura } height = { altura } /> 
         case 'Squirtle': return <Squirtle width={ largura } height = { altura } /> 
@@ -838,12 +803,7 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Arbok': return <Arbok width={ largura } height = { altura } /> 
         case 'Pikachu': return <Pikachu width={ largura } height = { altura } /> 
         case 'Raichu': return <Raichu width={ largura } height = { altura } /> 
-        case 'Sandshrew': return <Sandshrew width={ largura } height = { altura } /> 
-        case 'Sandslash': return <Sandslash width={ largura } height = { altura } /> 
-        case 'Nidorana': return <Nidorana width={ largura } height = { altura } /> 
-        case 'Nidorina': return <Nidorina width={ largura } height = { altura } /> 
-        case 'Nidoqueen': return <Nidoqueen width={ largura } height = { altura } /> 
-        case 'Swirlix': return <Swirlix width={ largura } height = { altura } /> 
+
         case 'Nidorino': return <Nidorino width={ largura } height = { altura } /> 
         case 'Nidoking': return <Nidoking width={ largura } height = { altura } /> 
         case 'Clefairy': return <Clefairy width={ largura } height = { altura } /> 
@@ -1058,6 +1018,7 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Suicune': return <Suicune width={ largura } height = { altura } /> 
         case 'Larvitar': return <Larvitar width={ largura } height = { altura } /> 
         case 'Pupitar': return <Pupitar width={ largura } height = { altura } /> 
+
         case 'Tyranitar': return <Tyranitar width={ largura } height = { altura } /> 
         case 'Lugia': return <Lugia width={ largura } height = { altura } /> 
         case 'HoOh': return <HoOh width={ largura } height = { altura } /> 
@@ -1282,12 +1243,8 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Yanmega': return <Yanmega width={ largura } height = { altura } /> 
         case 'Leafeon': return <Leafeon width={ largura } height = { altura } /> 
         case 'Glaceon': return <Glaceon width={ largura } height = { altura } /> 
-        case 'Gliscor': return <Gliscor width={ largura } height = { altura } /> 
-        case 'Mamoswine': return <Mamoswine width={ largura } height = { altura } /> 
-        case 'PorygonZ': return <PorygonZ width={ largura } height = { altura } /> 
-        case 'Gallade': return <Gallade width={ largura } height = { altura } /> 
-        case 'Probopass': return <Probopass width={ largura } height = { altura } /> 
-        case 'Dusknoir': return <Dusknoir width={ largura } height = { altura } /> 
+
+    
         case 'Froslass': return <Froslass width={ largura } height = { altura } /> 
         case 'Uxie': return <Uxie width={ largura } height = { altura } /> 
         case 'Mesprit': return <Mesprit width={ largura } height = { altura } /> 
@@ -1299,12 +1256,6 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Giratina': return <Giratina width={ largura } height = { altura } /> 
         case 'Cresselia': return <Cresselia width={ largura } height = { altura } /> 
         case 'Phione': return <Phione width={ largura } height = { altura } /> 
-        case 'Manaphy': return <Manaphy width={ largura } height = { altura } /> 
-        case 'Darkrai': return <Darkrai width={ largura } height = { altura } /> 
-        case 'Shaymin': return <Shaymin width={ largura } height = { altura } /> 
-        case 'Arceus': return <Arceus width={ largura } height = { altura } /> 
-        case 'Victini': return <Victini width={ largura } height = { altura } /> 
-        case 'Snivy': return <Snivy width={ largura } height = { altura } /> 
         case 'Servine': return <Servine width={ largura } height = { altura } /> 
         case 'Serperior': return <Serperior width={ largura } height = { altura } /> 
         case 'Tepig': return <Tepig width={ largura } height = { altura } /> 
@@ -1553,12 +1504,6 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Crabominable': return <Crabominable width={ largura } height = { altura } /> 
         case 'Oricorio': return <Oricorio width={ largura } height = { altura } /> 
         case 'Cutiefly': return <Cutiefly width={ largura } height = { altura } /> 
-        case 'Ribombee': return <Ribombee width={ largura } height = { altura } /> 
-        case 'Rockruff': return <Rockruff width={ largura } height = { altura } /> 
-        case 'Lycanroc': return <Lycanroc width={ largura } height = { altura } /> 
-        case 'Wishiwashi': return <Wishiwashi width={ largura } height = { altura } /> 
-        case 'Mareanie': return <Mareanie width={ largura } height = { altura } /> 
-        case 'Toxapex': return <Toxapex width={ largura } height = { altura } /> 
         case 'Mudbray': return <Mudbray width={ largura } height = { altura } /> 
         case 'Mudsdale': return <Mudsdale width={ largura } height = { altura } /> 
         case 'Dewpider': return <Dewpider width={ largura } height = { altura } /> 
@@ -1589,13 +1534,6 @@ case 'Tapufini': return <Tapufini width={ largura } height = { altura } />
         case 'Togedemaru': return <Togedemaru width={ largura } height = { altura } /> 
         case 'Mimikyu': return <Mimikyu width={ largura } height = { altura } /> 
         case 'Bruxish': return <Bruxish width={ largura } height = { altura } /> 
-        case 'Drampa': return <Drampa width={ largura } height = { altura } /> 
-        case 'Dhelmise': return <Dhelmise width={ largura } height = { altura } /> 
-        case 'Jangmoo': return <Jangmoo width={ largura } height = { altura } /> 
-        case 'Hakamoo': return <Hakamoo width={ largura } height = { altura } /> 
-        case 'Kommoo': return <Kommoo width={ largura } height = { altura } /> 
-        case 'Cosmog': return <Cosmog width={ largura } height = { altura } /> 
-        case 'Cosmoem': return <Cosmoem width={ largura } height = { altura } /> 
         case 'Solgaleo': return <Solgaleo width={ largura } height = { altura } /> 
         case 'Lunala': return <Lunala width={ largura } height = { altura } /> 
         case 'Nihilego': return <Nihilego width={ largura } height = { altura } /> 
