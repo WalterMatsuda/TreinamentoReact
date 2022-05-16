@@ -36,7 +36,7 @@ function Home() {
 
     async function getPokemons() {
         try {
-            const filtro = decrescente ? '?_sort=name&_order=desc&_limit=20' : '?_sort=name&_order=asc&_limit=20';
+            const filtro = decrescente ? '?_sort=name&_order=desc' : '?_sort=name&_order=asc';
             console.log("filtro", filtro);
             const resposta = await api.get<PokemonDTO[]>('/pokemons' + filtro);
             if (resposta.data && resposta.data.length > 0) {
