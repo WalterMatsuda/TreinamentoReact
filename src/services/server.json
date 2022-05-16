@@ -845,7 +845,7 @@
     {
       "id" :29 ,
       "code":29 , 
-      "name": "Nidoranâ™€",
+      "name": "Nidorana",
       "about" :{
        "weight": "7.0kg" , 
        "height": "0.4m" ,
@@ -935,7 +935,7 @@
     {
       "id" :32 ,
       "code":32 , 
-      "name": "Nidoranâ™‚",
+      "name": "Nidorana",
       "about" :{
        "weight": "9.0kg" , 
        "height": "0.5m" ,
@@ -3635,7 +3635,7 @@
     {
       "id" :122 ,
       "code":122 , 
-      "name": "Mr. Mime",
+      "name": "MrMime",
       "about" :{
        "weight": "54.5kg" , 
        "height": "1.3m" ,
@@ -13145,7 +13145,7 @@
     {
       "id" :439 ,
       "code":439 , 
-      "name": "Mime Jr.",
+      "name": "MimeJr",
       "about" :{
        "weight": "13.0kg" , 
        "height": "0.6m" ,
