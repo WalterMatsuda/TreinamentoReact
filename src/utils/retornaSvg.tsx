@@ -720,6 +720,13 @@ import Crabrawler from "../assets/pokemons/crabrawler.svg";
 import Crabominable from "../assets/pokemons/crabominable.svg";
 import Oricorio from "../assets/pokemons/oricorio.svg";
 import Cutiefly from "../assets/pokemons/cutiefly.svg";
+
+import Ribombee from "../assets/pokemons/ribombee.svg";
+import Rockruff from "../assets/pokemons/rockruff.svg";
+import Lycanroc from "../assets/pokemons/lycanroc.svg";
+import Wishiwashi from "../assets/pokemons/wishiwashi.svg";
+import Mareanie from "../assets/pokemons/mareanie.svg";
+import Toxapex from "../assets/pokemons/toxapex.svg";
 import Mudbray from "../assets/pokemons/mudbray.svg";
 import Mudsdale from "../assets/pokemons/mudsdale.svg";
 import Dewpider from "../assets/pokemons/dewpider.svg";
@@ -751,6 +758,13 @@ import Togedemaru from "../assets/pokemons/togedemaru.svg";
 import Mimikyu from "../assets/pokemons/mimikyu.svg";
 import Bruxish from "../assets/pokemons/bruxish.svg";
 import Drampa from "../assets/pokemons/drampa.svg";
+
+import Dhelmise from "../assets/pokemons/dhelmise.svg";
+import Jangmoo from "../assets/pokemons/jangmoo.svg";
+import Hakamoo from "../assets/pokemons/hakamoo.svg";
+import Kommoo from "../assets/pokemons/kommoo.svg";
+import Cosmog from "../assets/pokemons/cosmog.svg";
+import Cosmoem from "../assets/pokemons/cosmoem.svg";
 import Solgaleo from "../assets/pokemons/solgaleo.svg";
 import Lunala from "../assets/pokemons/lunala.svg";
 import Nihilego from "../assets/pokemons/nihilego.svg";
@@ -789,6 +803,7 @@ export default function retornaSvg(nome: string, largura = 72, altura = 72) {
         case 'Arbok': return <Arbok width={ largura } height = { altura } /> 
         case 'Pikachu': return <Pikachu width={ largura } height = { altura } /> 
         case 'Raichu': return <Raichu width={ largura } height = { altura } /> 
+
         case 'Nidorino': return <Nidorino width={ largura } height = { altura } /> 
         case 'Nidoking': return <Nidoking width={ largura } height = { altura } /> 
         case 'Clefairy': return <Clefairy width={ largura } height = { altura } /> 
@@ -1003,6 +1018,13 @@ export default function retornaSvg(nome: string, largura = 72, altura = 72) {
         case 'Suicune': return <Suicune width={ largura } height = { altura } /> 
         case 'Larvitar': return <Larvitar width={ largura } height = { altura } /> 
         case 'Pupitar': return <Pupitar width={ largura } height = { altura } /> 
+
+        case 'Tyranitar': return <Tyranitar width={ largura } height = { altura } /> 
+        case 'Lugia': return <Lugia width={ largura } height = { altura } /> 
+        case 'HoOh': return <HoOh width={ largura } height = { altura } /> 
+        case 'Celebi': return <Celebi width={ largura } height = { altura } /> 
+        case 'Treecko': return <Treecko width={ largura } height = { altura } /> 
+        case 'Grovyle': return <Grovyle width={ largura } height = { altura } /> 
         case 'Sceptile': return <Sceptile width={ largura } height = { altura } /> 
         case 'Torchic': return <Torchic width={ largura } height = { altura } /> 
         case 'Combusken': return <Combusken width={ largura } height = { altura } /> 
@@ -1221,6 +1243,8 @@ export default function retornaSvg(nome: string, largura = 72, altura = 72) {
         case 'Yanmega': return <Yanmega width={ largura } height = { altura } /> 
         case 'Leafeon': return <Leafeon width={ largura } height = { altura } /> 
         case 'Glaceon': return <Glaceon width={ largura } height = { altura } /> 
+
+    
         case 'Froslass': return <Froslass width={ largura } height = { altura } /> 
         case 'Uxie': return <Uxie width={ largura } height = { altura } /> 
         case 'Mesprit': return <Mesprit width={ largura } height = { altura } /> 
