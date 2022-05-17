@@ -1,5 +1,13 @@
 import { registerRootComponent } from 'expo';
-
+import {
+    Link,
+    DirectLink,
+    Element,
+    Events,
+    animateScroll,
+    scrollSpy,
+    scroller
+  } from "react-scroll";
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
