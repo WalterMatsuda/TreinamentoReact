@@ -9,13 +9,17 @@ import { useTheme } from "styled-components";
 import TypeCard from "../../components/TypeCard";
 import AboutData from "../../components/AboutData";
 import BaseStats from "../../components/BaseStats";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useAuth } from "../../hooks/auth";
+import { FavoritoDTO } from "../../dtos/FavoritoDTO";
 interface ParametrosRota{
     pokemon: PokemonDTO;
 }
-
+const FAVORITO_KEY ='@pokedex:favoritos'; 
 function Detalhes(){
 
     const [pokemon, setPokemon] = useState<PokemonDTO>();
+    const {} = useAuth();
     const tema = useTheme();
     const route = useRoute();
 
@@ -30,7 +34,20 @@ function Detalhes(){
     function voltar(){
         navigation.goBack();
     }
+    async function addFavoritos(pokemon : PokemonDTO){
+            //const pokemoString = JSON.stringify(pokemon);
+        const favoritosStorage = await AsyncStorage.getItem(FAVORITO_KEY);
+         
 
+                const favoritosParse =favoritosStorage ? JSON.parse(favoritosStorage) as FavoritoDTO[]:[];
+                favoritosParse.push({
+                    id : Math.random(), 
+                    pokemon , 
+                    usuario : usuario!
+                 } ); 
+await AsyncStorage.setItem(FAVORITO_KEY , JSON.stringify (favoritosParse));
+
+    }
     if(!pokemon) return <View/>
 
     return(
@@ -51,7 +68,7 @@ function Detalhes(){
                     <Nome>{pokemon.name}</Nome>
                     <Codigo>{pokemon.code}</Codigo>
                 </ConteudoTitulo>
-                <BotaoHeader>
+                <BotaoHeader onPress={()=> addFavoritos(pokemon) }>
                     <MaterialCommunityIcons 
                         name="heart"
                         size={22}

@@ -11,25 +11,6 @@ import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator(); 
 
-function  HomeStack(){
-    return(
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="HomeScreen" component={ Home} /> 
-            <Stack.Screen name="Detalhes" component={ Detalhes}/>
-        </Stack.Navigator>
-
-    )
-}
-
-function PerfilStack(){
-    return(
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="PerfilScreen" component={ Perfil } />
-        </Stack.Navigator>
-
-    )
-}
-
 function AppRoutes() {
     const tema = useTheme();
 
@@ -51,6 +32,25 @@ function AppRoutes() {
             ) ) }}/>
 
         </Tab.Navigator>
+    )
+}
+
+function  HomeStack(){
+    return(
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="HomeScreen" component={ Home} /> 
+            <Stack.Screen name="Detalhes" component={ Detalhes}/>
+        </Stack.Navigator>
+
+    )
+}
+
+function PerfilStack(){
+    return(
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="PerfilScreen" component={ Perfil } />
+        </Stack.Navigator>
+
     )
 }
 

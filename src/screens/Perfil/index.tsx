@@ -23,8 +23,8 @@ const {usuario} = useAuth();
                         }} 
                     />
                 </BackgroundImage>
-                    <Titulo>{usuario} </Titulo>
-                <BotaoSair>
+                    <Titulo> {usuario?.usuarioNome} </Titulo>
+                <BotaoSair onPress ={logoff} >
                     <Sair>Sair</Sair>
                 </BotaoSair>
             </Conteudo>

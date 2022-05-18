@@ -8,6 +8,7 @@ import Home from './src/screens/Home';
 import Detalhes from './src/screens/Detalhes';
 import Routes from './src/routes';
 
+
 export default function App() {
 
   const [fontsLoaded] = useFonts({

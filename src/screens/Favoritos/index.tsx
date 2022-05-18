@@ -1,4 +1,8 @@
-import React from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useIsFocused } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
+import { FlatList } from "react-native";
+import { FavoritoDTO } from "../../dtos/FavoritoDTO";
 import { PokemonDTO } from "../../dtos/PokemonDTO";
 import {
 Container , 
@@ -7,6 +11,8 @@ Titulo ,
 } from './styles';
 
 function Favoritos(){
+    const [favoritos , setFavoritos ] = useState<FavoritoDTO[]>([]);
+    const isFocused = useIsFocused(); 
 
 const pokemon = {
     id: 1,
@@ -45,7 +51,30 @@ const pokemon = {
         }
     ]
 } as PokemonDTO;
+ 
+async function getFavoritos(){
+    const favoritosStorage = await AsyncStorage.getItem(FAVORITO_KEY);
+    if(favoritos){
+        const favoritosParse = JSON.parse(favoritosStorage) as FavoritoDTO[];
+        setFavoritos(favoritosParse) ; 
 
+    }
+}
+async function removeStorage(id: number){
+    const favoritos = await AsyncStorage.getItem(FAVORITOS_KEY);        
+    if(favoritos){
+        const favoritosParse = JSON.parse(favoritos) as FavoritoDTO[];
+        const filtrados = favoritosParse.filter(f => f.pokemon.id !== id);
+        await AsyncStorage.setItem(FAVORITOS_KEY, JSON.stringify(filtrados));
+        getFavoritos();
+    }
+}
+
+useEffect(() => {
+    console.log('bateu efeito')
+    getFavoritos();
+
+} , [isFocused] ) 
 
 
         return( 
@@ -53,6 +82,13 @@ const pokemon = {
             <Headers> 
                 <Titulo>Favoritos</Titulo>
             </Headers>
+            {
+                <FlatList data={favoritos} keyExtractor={(item)=> item.id.toString()} renderItem={({item})=>(
+
+                    <FavoriteCard pokemon={item.pokemon} />
+                )} /> 
+
+            }
             <FavoriteCard></FavoriteCard>
 </Container>
 
