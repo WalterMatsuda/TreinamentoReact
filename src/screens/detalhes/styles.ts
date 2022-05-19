@@ -58,12 +58,8 @@ export const Conteudo = styled.View`
 `;
 
 export const ConteudoSvg = styled.View`
-    margin-top: -140px;
+    margin-top: -130px;
     position: absolute;
-    border-radius: 8px;
-    border-width: 1px;
-    border-color: ${({theme, type}) => theme[type]};
-    background-color: ${({theme, type}) => theme.white};
 `;
 
 export const Tipos = styled.View`

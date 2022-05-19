@@ -1,5 +1,5 @@
-import { useNavigation } from "@react-navigation/native";
-import React, { useEffect, useState , useRef } from "react";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
 import { FlatList, Keyboard, TouchableWithoutFeedback } from "react-native";
 
 import Pokebola from '../../assets/icons/pokeball.svg';
@@ -32,19 +32,17 @@ function Home(){
     }
 
     function alteraNomeFiltro(nome: string){
-        console.log(nome);
         setNomeFiltro(nome);
         const filtrados = pokemons.filter(p => p.name.toLowerCase().includes(nome.toLowerCase()));
         setPokemonsFiltro(filtrados);
     }
-    var limite = 15;
+
     async function getPokemons(){
         try {
             
-            const filtro = decrescente ? '?_sort=name&_order=desc&_limit='+limite : '?_sort=name&_order=asc&_limit='+limite;
+            const filtro = decrescente ? '?_sort=name&_order=desc' : '?_sort=name&_order=asc';
     
             const resposta = await api.get<PokemonDTO[]>(`/pokemons${filtro}`);
-            console.log(resposta.data);
             if(resposta.data && resposta.data.length > 0){
                 setPokemons(resposta.data);
                 setPokemonsFiltro(resposta.data);
@@ -58,17 +56,10 @@ function Home(){
     useEffect(() => {
         getPokemons();
     }, [decrescente]);
-    const listInnerRef = useRef();
-
-    const onScroll = () => {
-    limite+=5;  
-    getPokemons();
-    console.log(limite);
-    }
 
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-            <Container >
+            <Container>
                 <Header>
                     <ConteudoTitulo>
                         <Pokebola width={24} height={24}/>
@@ -105,7 +96,6 @@ function Home(){
                             
                         />
                     )}
-                    onScroll={onScroll}
                 />
 
             </Container>

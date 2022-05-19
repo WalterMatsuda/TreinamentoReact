@@ -1,9 +1,8 @@
-
+import { PokemonDTO } from "./PokemonDTO";
+import { UsuarioDTO } from "./UsuarioDTO";
 
 export interface FavoritoDTO{
-id : string, 
-pokemon : string, 
-storage :string  ,
-usuario : string 
-
+    id: number;
+    pokemon: PokemonDTO;
+    usuario: UsuarioDTO;
 }

@@ -6,14 +6,16 @@ import AuthRoutes from "./auth.routes";
 
 
 function Routes() {
-  const { usuario} = useAuth();
+  const {usuario} = useAuth();
+
     return (
       <NavigationContainer>
         {
-         usuario ?  <AppRoutes /> :
-          <AuthRoutes />
+          usuario ? <AppRoutes/> : <AuthRoutes/>
         }
       </NavigationContainer>
     );
   }
+
+
   export default Routes;

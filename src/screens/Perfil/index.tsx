@@ -1,10 +1,12 @@
 import React from "react";
 import { Image } from "react-native";
+import { useAuth } from "../../hooks/auth";
 import { BackgroundImage, BotaoSair, Container, Conteudo, Header, Sair, Titulo } from "./styles";
 
 function Perfil (){
 
-const {usuario} = useAuth(); 
+    const {usuario, logoff} = useAuth();
+
     return (
         <Container>
             <Header>
@@ -14,7 +16,7 @@ const {usuario} = useAuth();
                 <BackgroundImage>
                     <Image
                         source={{
-                            uri: 'https://avatars.githubusercontent.com/u/91134093?s=96&v=4'
+                            uri: 'https://avatars.githubusercontent.com/u/48105194?v=4'
                         }}
                         style={{
                             width: 130,
@@ -23,8 +25,10 @@ const {usuario} = useAuth();
                         }} 
                     />
                 </BackgroundImage>
-                    <Titulo> {usuario?.usuarioNome} </Titulo>
-                <BotaoSair onPress ={logoff} >
+                <Titulo>{usuario?.usuarioNome}</Titulo>
+                <BotaoSair
+                    onPress={logoff}
+                >
                     <Sair>Sair</Sair>
                 </BotaoSair>
             </Conteudo>
@@ -33,7 +37,3 @@ const {usuario} = useAuth();
 }
 
 export default Perfil;
-
-function useAuth(): { usuario: any; } {
-    throw new Error("Function not implemented.");
-}
